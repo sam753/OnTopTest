@@ -1,0 +1,22 @@
+<nav>
+  <a routerLink="/contracts" routerLinkActive="active" [ngClass]="{'selected': getHeaderStyle('contracts')}">
+    <img src="../../../assets/svg-icons/user.svg" class="icon">
+    <span class="page-name">Contracts</span>
+    <span><i class="arrow down"></i></span>
+  </a>
+  <a routerLink="/documents" routerLinkActive="active" [ngClass]="{'selected': getHeaderStyle('documents')}">
+    <img src="../../../assets/svg-icons/note.svg" class="icon">
+    <span class="page-name">Documents</span>
+    <span><i class="arrow down"></i></span>
+  </a>
+  <a routerLink="/payout" routerLinkActive="active" [ngClass]="{'selected': getHeaderStyle('payout')}">
+    <img src="../../../assets/svg-icons/payment-card.svg" class="icon">
+    <span class="page-name">Payout</span>
+    <span><i class="arrow down"></i></span>
+  </a>
+  <a routerLink="/time" routerLinkActive="active" [ngClass]="{'selected': getHeaderStyle('time')}">
+    <img src="../../../assets/svg-icons/calendar.svg" class="icon">
+    <span class="page-name">Time</span>
+    <span><i class="arrow down"></i></span>
+  </a>
+</nav>

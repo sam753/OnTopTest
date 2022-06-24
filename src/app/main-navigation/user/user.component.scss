@@ -1,0 +1,17 @@
+.spacer {
+  border: 1px solid #C4C4C4;
+  height: 45px;
+}
+
+.userContainer {
+  display: flex;
+  align-items: center;
+  .logged-user-photo {
+    width: 65px;
+    height: 65px;
+    padding: 0 1rem 0 2rem;
+  }
+  .arrow {
+    border-color: #BEBEBE;
+  }
+}

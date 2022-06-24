@@ -1,0 +1,48 @@
+<div class="card-container">
+  <mat-card *ngFor="let card of data" class="card">
+    <mat-card-content>
+      <div>
+        <span>Contractor name</span>
+        <span>{{card.name}}</span>
+      </div>
+      <div>
+        <span>Type</span>
+        <span>{{card.type}}</span>
+      </div>
+      <div>
+        <span>Start date</span>
+        <span>{{card.startDate}}</span>
+      </div>
+      <div>
+        <span>
+          Amount
+        </span>
+        <span>{{card.amount}}</span>
+      </div>
+      <div>
+        <span>
+          Status
+        </span>
+        <span>
+          <status-chip [status]="card.status">{{ card.status }}</status-chip>
+        </span>
+      </div>
+      <div>
+        <span>
+          Actions
+        </span>
+        <span>
+          <button mat-button [matMenuTriggerFor]="menu" class="menuButton">
+            <mat-icon class="actionsIcon">more_vert</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu" yPosition="below">
+            <button mat-menu-item><mat-icon>border_color</mat-icon>Edit</button>
+            <button mat-menu-item><mat-icon>gesture</mat-icon>Sing</button>
+            <button mat-menu-item><mat-icon>description</mat-icon>View summary</button>
+            <button mat-menu-item><mat-icon>delete</mat-icon>Delete</button>
+          </mat-menu>
+        </span>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

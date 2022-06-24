@@ -1,0 +1,23 @@
+.chip {
+	display: flex;
+  align-items: center;
+	border-radius: 20px;
+	padding: 0rem 0.6rem;
+	font-size: 10px;
+	line-height: normal;
+	
+	$chip-colors: success, warning;
+	
+	@each $color in $chip-colors {
+		&.chip-#{$color} {
+			background: var(--color-feedback-#{$color}-light);
+			color: var(--color-feedback-#{$color})
+		}
+		&:before {
+			content: "• ";
+			font-size: 22px;
+			font-weight: 900;
+			padding-right: 0.4rem;
+		}
+	}
+}

@@ -1,0 +1,146 @@
+.filters-top-part {
+  display: flex;
+  margin-bottom: 2rem;
+  .search {
+    width: 100%; 
+    ::ng-deep {
+      .mat-form-field-wrapper {
+        .mat-form-field-flex {
+          border: 0.5px solid #989B9B;
+        }
+      }
+    }
+    .searchLabel {
+      color: #C4C4C4;
+    }
+    .searchIcon {
+      color: #DADADA;
+    }
+  }
+  .filter-button {
+    margin: 0 1rem;
+    button {
+      box-shadow: none;
+      background: #EBEBEB;
+      border-radius: 5px;
+      font-weight: 500;
+      font-size: 16px;
+      color: #1C0B11;
+      padding: 7px 26px;
+    }
+  }
+  .newHire-button {
+    button {
+      background: #FF5A70;
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+      border-radius: 5px;
+      font-weight: 700;
+      font-size: 18px;
+      color: white;
+      padding: 8px 60px;
+      .mat-icon {
+        font-size: 28px;
+        position: relative;
+        bottom: 1px;
+        width: 28px;
+        height: 28px;
+      }
+    }
+  }
+}
+
+.filters-bottom-part {
+  display: flex;
+  margin-bottom: 2rem;
+  justify-content: space-between;
+  .mat-form-field {
+    width: calc(25% - 16px);
+    .mat-date-range-input {
+      input {
+        padding-left: 0;
+      }
+    }
+    .datePickerIcon {
+      color: #898989;
+    }
+    .mat-form-field-label {
+      padding-left: 0;
+    }
+    .bottomFiltersLabel {
+      font-weight: 500;
+      font-size: 13px;
+      color: #898989;
+    }
+    .labelIcon {
+      width: 18px;
+      height: 18px;
+      font-size: 18px;
+      top: 4px;
+      position: relative;
+    }
+  }
+  ::ng-deep .mat-select-arrow {
+    border: solid #C4C4C4;
+    border-width: 0 2px 2px 0 !important;
+    border-right: 2px solid #C4C4C4 !important;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+  .clearFilters {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .filters-top-part {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .search {
+      margin-bottom: 1.5rem;
+    }
+    button {
+      width: 100%;
+    }
+    .filter-button {
+      width: calc(35% - 10px);
+      margin: 0;
+    }
+    .newHire-button {
+      width: calc(65% - 10px);
+    }
+  }
+}
+
+@media (max-width: 1280px) {
+  .filters-bottom-part {
+    flex-wrap: wrap;
+    .mat-form-field {
+      width: calc(50% - 16px);
+      margin-bottom: 1rem;
+    }
+  }
+  .newHire-button {
+    button {
+      padding: 8px 25px !important;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .filters-bottom-part {
+    justify-content: center;
+    .mat-form-field {
+      width: 80%;
+      margin-bottom: 1rem;
+    }
+    .clearFilters {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      width: 80%;
+      color: #FF5A70;
+    }
+  }
+}

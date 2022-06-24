@@ -1,0 +1,32 @@
+<table>
+  <tr>
+    <th>Contractor name</th>
+    <th>Type</th>
+    <th>Start date</th>
+    <th>Amount</th>
+    <th>Status</th>
+    <th>Actions</th>
+  </tr>
+  <tr *ngFor="let element of data">
+    <td>
+      <div class="user">
+        <img [src]="element.img"> <span>{{ element.name }}</span>
+      </div>
+    </td>
+    <td>{{ element.type }}</td>
+    <td>{{ element.startDate }}</td>
+    <td>${{ element.amount }} USD</td>
+    <td><status-chip [status]="element.status">{{ element.status }}</status-chip></td>
+    <td>
+      <button mat-button [matMenuTriggerFor]="menu">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item><mat-icon>border_color</mat-icon>Edit</button>
+        <button mat-menu-item><mat-icon>gesture</mat-icon>Sing</button>
+        <button mat-menu-item><mat-icon>description</mat-icon>View summary</button>
+        <button mat-menu-item><mat-icon>delete</mat-icon>Delete</button>
+      </mat-menu>
+    </td>
+  </tr>
+</table>

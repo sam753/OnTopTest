@@ -1,0 +1,27 @@
+.mat-toolbar {
+  justify-content: space-between;
+  background-color: white;
+  height: 108px;
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.08);
+  padding: 0 4rem;
+  @media (max-width: 700px) {
+    padding: 0 1rem;
+    height: 61px;
+    img {
+      width: 79px;
+    }
+  }
+}
+
+mobile-navigation {
+  display: none;
+}
+
+@media (max-width: 1180px) {
+  toolbar-navigation, user {
+    display: none;
+  }
+  mobile-navigation {
+    display: block;
+  }
+}
